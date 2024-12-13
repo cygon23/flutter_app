@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_ui/screens/splashScreens/splash_instagram.dart';
+import 'package:flutter_ui/screens/splashScreens/splash_tick_tock.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 
@@ -26,7 +27,15 @@ class MenuRoute extends StatelessWidget {
             onTap: (){
                Get.to(() => SplashInstagram());
             },
+          ),
+          ListTile(
+            trailing: Icon(Icons.keyboard_arrow_right),
+            title: Text('Ticktock'),
+            onTap: (){
+              Get.to(() => TicktocScreen());
+            },
           )
+
         ],
       ),
     );

@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_ui/screens/bottom_navigation/basic_navigation.dart';
 import 'package:flutter_ui/screens/splashScreens/splash_facebook.dart';
 import 'package:flutter_ui/screens/splashScreens/splash_instagram.dart';
 import 'package:flutter_ui/screens/splashScreens/splash_tick_tock.dart';
@@ -50,7 +51,15 @@ class MenuRoute extends StatelessWidget {
             onTap: (){
               Get.to(() => TicktocScreen());
             },
+          ),
+          ListTile(
+            trailing: Icon(Icons.view_column),
+            title: Text('Bottom navigation'),
+            onTap: (){
+              Get.to(() => BasicNavigation());
+            },
           )
+
 
         ],
       ),

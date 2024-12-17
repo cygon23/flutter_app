@@ -29,7 +29,9 @@ class _BasicNavigationState extends State<BasicNavigation> {
 
   @override
   Widget build(BuildContext context) {
+    ctx = context;
     return Scaffold(
+      body: SafeArea(child: Text("Testing data")),
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
@@ -40,8 +42,8 @@ class _BasicNavigationState extends State<BasicNavigation> {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.blue[700],
-        selectedItemColor: Colors.white,
+        backgroundColor: Colors.red[700],
+        selectedItemColor: Colors.yellow,
         unselectedItemColor: Colors.grey[400],
         currentIndex: currentIndex,
         onTap: (int index) {

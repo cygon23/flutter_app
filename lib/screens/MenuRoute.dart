@@ -1,6 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_ui/screens/bottom_navigation/basic_navigation.dart';
+import 'package:flutter_ui/screens/bottom_navigation/main_buttom_navigation.dart';
+import 'package:flutter_ui/screens/bottom_navigation/primary_navigation.dart';
+import 'package:flutter_ui/screens/bottom_navigation/shifting_navigation.dart';
+import 'package:flutter_ui/screens/bottom_navigation/shifting_navigation_darkmode.dart';
 import 'package:flutter_ui/screens/splashScreens/splash_facebook.dart';
 import 'package:flutter_ui/screens/splashScreens/splash_instagram.dart';
 import 'package:flutter_ui/screens/splashScreens/splash_tick_tock.dart';
@@ -54,13 +58,42 @@ class MenuRoute extends StatelessWidget {
           ),
           ListTile(
             trailing: Icon(Icons.view_column),
-            title: Text('Bottom navigation'),
+            title: Text('Basic navigation'),
             onTap: (){
               Get.to(() => BasicNavigation());
             },
+          ),
+
+          ListTile(
+            trailing: Icon(Icons.keyboard_arrow_right),
+            title: Text('Slide navigation'),
+            onTap: (){
+              Get.to(() => ShiftingNavigation());
+            },
+          ),
+
+          ListTile(
+            trailing: Icon(Icons.keyboard_arrow_right),
+            title: Text('Slide navigation(dark)'),
+            onTap: (){
+              Get.to(() => ShiftingNavigationDarkMode());
+            },
+          ),
+
+          ListTile(
+            trailing: Icon(Icons.keyboard_arrow_right),
+            title: Text('Primary navigation(main single icon)'),
+            onTap: (){
+              Get.to(() => PrimaryNavigation());
+            },
+          ),
+          ListTile(
+            trailing: Icon(Icons.keyboard_arrow_right),
+            title: Text('Primary navigation(main single icon)'),
+            onTap: (){
+              Get.to(() => MainBottomNavigation());
+            },
           )
-
-
         ],
       ),
     );

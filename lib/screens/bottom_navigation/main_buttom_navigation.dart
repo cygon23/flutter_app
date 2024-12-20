@@ -122,13 +122,7 @@ class MainBottomNavigationState extends State<MainBottomNavigation>
                           Container(
                             height: 10,
                             width: 40,
-                            color: MyColors.grey_20,
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ],
+                            color: MyColors.
               ),
             ),
           ),

@@ -5,6 +5,10 @@ import 'package:flutter_ui/screens/bottom_navigation/main_buttom_navigation.dart
 import 'package:flutter_ui/screens/bottom_navigation/primary_navigation.dart';
 import 'package:flutter_ui/screens/bottom_navigation/shifting_navigation.dart';
 import 'package:flutter_ui/screens/bottom_navigation/shifting_navigation_darkmode.dart';
+import 'package:flutter_ui/screens/bottom_sheet/basic_buttom_sheet.dart';
+import 'package:flutter_ui/screens/bottom_sheet/filter_bottom_sheet.dart';
+import 'package:flutter_ui/screens/bottom_sheet/floating_buttom_sheet.dart';
+import 'package:flutter_ui/screens/bottom_sheet/list_buttom_sheet.dart';
 import 'package:flutter_ui/screens/splashScreens/splash_facebook.dart';
 import 'package:flutter_ui/screens/splashScreens/splash_instagram.dart';
 import 'package:flutter_ui/screens/splashScreens/splash_tick_tock.dart';
@@ -82,18 +86,49 @@ class MenuRoute extends StatelessWidget {
 
           ListTile(
             trailing: Icon(Icons.keyboard_arrow_right),
-            title: Text('Primary navigation(main single icon)'),
+            title: Text('Primary navigation(main single icon'),
             onTap: (){
               Get.to(() => PrimaryNavigation());
             },
           ),
           ListTile(
             trailing: Icon(Icons.keyboard_arrow_right),
-            title: Text('Primary navigation(main single icon)'),
+            title: Text('Primary navigation(main single icon'),
             onTap: (){
               Get.to(() => MainBottomNavigation());
             },
-          )
+          ),
+          ListTile(
+            trailing: Icon(Icons.keyboard_arrow_right),
+            title: Text('Button sheets'),
+            onTap: (){
+              Get.to(() => BasicButtomSheet());
+            },
+          ),
+          ListTile(
+            trailing: Icon(Icons.keyboard_arrow_right),
+            title: Text('List Button sheets'),
+            onTap: (){
+              Get.to(() =>ListButtomSheet());
+            },
+          ),
+
+          ListTile(
+            trailing: Icon(Icons.keyboard_arrow_right),
+            title: Text('Floating Button sheets'),
+            onTap: (){
+              Get.to(() =>FloatingBottomSheet());
+            },
+          ),
+
+          ListTile(
+            trailing: Icon(Icons.keyboard_arrow_right),
+            title: Text('Filter Button sheets'),
+            onTap: (){
+              Get.to(() =>FilterBottomSheet());
+            },
+          ),
+
         ],
       ),
     );

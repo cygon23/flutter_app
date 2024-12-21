@@ -68,7 +68,6 @@ class MainBottomNavigationState extends State<MainBottomNavigation>
                         radius: 25,
                         backgroundColor: MyColors.grey_20,
                       ),
-
                       const SizedBox(width: 20), // Proper spacing between widgets
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -94,7 +93,7 @@ class MainBottomNavigationState extends State<MainBottomNavigation>
                       ),
                     ],
                   ),
-                  Container(height: 20),
+                  const SizedBox(height: 20),
                   Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [
@@ -102,7 +101,6 @@ class MainBottomNavigationState extends State<MainBottomNavigation>
                         radius: 25,
                         backgroundColor: MyColors.grey_20,
                       ),
-
                       const SizedBox(width: 20), // Proper spacing between widgets
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -122,17 +120,23 @@ class MainBottomNavigationState extends State<MainBottomNavigation>
                           Container(
                             height: 10,
                             width: 40,
-                            color: MyColors.
+                            color: MyColors.grey_20,
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ],
               ),
             ),
           ),
           Card(
             elevation: 4,
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(0)
+              borderRadius: BorderRadius.circular(0),
             ),
             clipBehavior: Clip.antiAliasWithSaveLayer,
-            margin: EdgeInsets.symmetric(vertical: 4),
+            margin: const EdgeInsets.symmetric(vertical: 4),
             child: TabBar(
               indicatorColor: Colors.transparent,
               indicatorSize: TabBarIndicatorSize.tab,
@@ -140,27 +144,24 @@ class MainBottomNavigationState extends State<MainBottomNavigation>
               unselectedLabelColor: Colors.blue[900],
               labelColor: Colors.blue[900],
               tabs: [
-                Tab(icon: Icon(Icons.home, size: 21,)),
-                Tab(icon: Icon(Icons.event_seat, size: 21,)),
+                const Tab(icon: Icon(Icons.home, size: 21)),
+                const Tab(icon: Icon(Icons.event_seat, size: 21)),
                 FloatingActionButton(
                   heroTag: "kyo",
                   backgroundColor: Colors.blue[900],
                   elevation: 3,
-                  onPressed: (){
-                    child: Icon(
-                      Icons.add,
-                        color:Colors.white,
-                    );
-                  },
+                  onPressed: () {},
+                  child: const Icon(
+                    Icons.add,
+                    color: Colors.white,
+                  ),
                 ),
-
-                Tab(icon: Icon(Icons.notifications, size: 21)),
-                Tab(icon: Icon(Icons.shopping_cart, size: 21)),
-
+                const Tab(icon: Icon(Icons.notifications, size: 21)),
+                const Tab(icon: Icon(Icons.shopping_cart, size: 21)),
               ],
               controller: _tabController,
             ),
-          )
+          ),
         ],
       ),
     );

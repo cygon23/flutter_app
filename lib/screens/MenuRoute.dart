@@ -9,6 +9,9 @@ import 'package:flutter_ui/screens/bottom_sheet/basic_buttom_sheet.dart';
 import 'package:flutter_ui/screens/bottom_sheet/filter_bottom_sheet.dart';
 import 'package:flutter_ui/screens/bottom_sheet/floating_buttom_sheet.dart';
 import 'package:flutter_ui/screens/bottom_sheet/list_buttom_sheet.dart';
+import 'package:flutter_ui/screens/cards/basic_cards.dart';
+import 'package:flutter_ui/screens/cards/timeline_cards.dart';
+import 'package:flutter_ui/screens/cards/wizard_cards.dart';
 import 'package:flutter_ui/screens/splashScreens/splash_facebook.dart';
 import 'package:flutter_ui/screens/splashScreens/splash_instagram.dart';
 import 'package:flutter_ui/screens/splashScreens/splash_tick_tock.dart';
@@ -48,7 +51,7 @@ class MenuRoute extends StatelessWidget {
           ),
           ListTile(
             trailing: Icon(Icons.keyboard_arrow_right),
-            title: Text('X'),
+            title: Text('Twiter'),
             onTap: (){
               Get.to(() => TwiterScreen());
             },
@@ -60,6 +63,12 @@ class MenuRoute extends StatelessWidget {
               Get.to(() => TicktocScreen());
             },
           ),
+
+          ListTile(
+            leading: Icon(Icons.contact_page),
+            title: Text('Navigation'),
+          ),
+
           ListTile(
             trailing: Icon(Icons.view_column),
             title: Text('Basic navigation'),
@@ -98,6 +107,12 @@ class MenuRoute extends StatelessWidget {
               Get.to(() => MainBottomNavigation());
             },
           ),
+
+          ListTile(
+            leading: Icon(Icons.bubble_chart),
+            title: Text('buttons'),
+          ),
+
           ListTile(
             trailing: Icon(Icons.keyboard_arrow_right),
             title: Text('Button sheets'),
@@ -129,6 +144,34 @@ class MenuRoute extends StatelessWidget {
             },
           ),
 
+          ListTile(
+            leading: Icon(Icons.car_repair),
+            title: Text('Cards'),
+          ),
+
+          ListTile(
+            trailing: Icon(Icons.keyboard_arrow_right),
+            title: Text('Basic Cards'),
+            onTap: (){
+              Get.to(() =>BasicCards());
+            },
+          ),
+
+          ListTile(
+            trailing: Icon(Icons.keyboard_arrow_right),
+            title: Text('Timeline Cards'),
+            onTap: (){
+              Get.to(() =>TimelineCards());
+            },
+          ),
+
+          ListTile(
+            trailing: Icon(Icons.keyboard_arrow_right),
+            title: Text('Timeline Cards'),
+            onTap: (){
+              Get.to(() =>wizardCards());
+            },
+          ),
         ],
       ),
     );
